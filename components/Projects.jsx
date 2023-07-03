@@ -7,10 +7,12 @@ import cryptoImg from "../public/assets/projects/crypto.jpg";
 import netflixImg from "../public/assets/projects/netflix.jpg";
 import twitchImg from "../public/assets/projects/twitch.jpg";
 import todoappImg from "../public/assets/projects/todo-app.png";
-import simplewebpageImg from "../public/assets/projects/singlewebpage-project.png";
+import reactportfolioImg from "../public/assets/projects/react-portfolio.png";
 import ProjectItem2 from "./ProjectItem2";
 import nextauthImg from "../public/assets/projects/next-auth.png";
 import ProjectItem3 from "./ProjectItem3";
+import izzatportfolioImg from "../public/assets/projects/izzat-portfolio.png";
+import ProjectItem4 from "./ProjectItem4";
 
 const Projects = () => {
     return (
@@ -26,20 +28,20 @@ const Projects = () => {
                         backgroundImg={todoappImg}
                         projectUrl="https://github.com/izzatonline/to-dos"
                     />
-                    <ProjectItem2
-                        title="Single HTML Web Page"
-                        backgroundImg={simplewebpageImg}
-                        projectUrl="https://izzatonline.github.io/IzzatJamal-portfolio/#home"
-                    />
                     <ProjectItem3
                         title="Next-Auth Login Page"
                         backgroundImg={nextauthImg}
-                        projectUrl="/property"
+                        projectUrl="https://github.com/izzatonline/nav-bar-project"
                     />
-                    <ProjectItem1
-                        title="Property Finder"
-                        backgroundImg={twitchImg}
-                        projectUrl="/property"
+                    <ProjectItem4
+                        title="Izzat-Portfolio"
+                        backgroundImg={izzatportfolioImg}
+                        projectUrl="https://izzat-portfolio.vercel.app/"
+                    />
+                    <ProjectItem2
+                        title="Portfolio with Night Mode"
+                        backgroundImg={reactportfolioImg}
+                        projectUrl="https://react-portfolio-izzatjamal-dhn1h7y33-izzatonline.vercel.app/"
                     />
                 </div>
             </div>

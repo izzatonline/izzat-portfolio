@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const ProjectItem2 = ({ title, backgroundImg, projectUrl }) => {
+const ProjectItem4 = ({ title, backgroundImg, projectUrl }) => {
     return (
         <div className="relative flex items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl p-4 group hover:bg-gradient-to-r from-[#5651e5] to-[#709dff]">
             <Image
@@ -15,7 +15,7 @@ const ProjectItem2 = ({ title, backgroundImg, projectUrl }) => {
                     {title}
                 </h3>
                 <p className="pb-4 pt-2 text-white text-center">
-                    React, Tailwind CSS, Github-Vercel
+                    Next Js, Tailwind CSS, Github-Vercel
                 </p>
                 <Link href={projectUrl}>
                     <p className="text-center py-3 rounded-lg bg-white text-gray-700 font-bold text-lg cursor-pointer">
@@ -27,4 +27,4 @@ const ProjectItem2 = ({ title, backgroundImg, projectUrl }) => {
     );
 };
 
-export default ProjectItem2;
+export default ProjectItem4;
