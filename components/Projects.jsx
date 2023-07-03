@@ -1,11 +1,6 @@
-import Image from "next/image";
 import React from "react";
-import propertyImg from "../public/assets/projects/property.jpg";
-import Link from "next/link";
 import ProjectItem1 from "./ProjectItem1";
-import cryptoImg from "../public/assets/projects/crypto.jpg";
-import netflixImg from "../public/assets/projects/netflix.jpg";
-import twitchImg from "../public/assets/projects/twitch.jpg";
+
 import todoappImg from "../public/assets/projects/todo-app.png";
 import reactportfolioImg from "../public/assets/projects/react-portfolio.png";
 import ProjectItem2 from "./ProjectItem2";
