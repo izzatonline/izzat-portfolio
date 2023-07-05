@@ -17,7 +17,7 @@ const Navbar = () => {
     const [shadow, setShadow] = useState(false);
     const [navBg, setNavBg] = useState("#ecf0f3");
     const [linkColor, setLinkColor] = useState("#1f2937");
-    const [position, setPosition] = useState("fixed");
+    // const [position, setPosition] = useState("fixed");
     const router = useRouter();
 
     useEffect(() => {
@@ -86,7 +86,7 @@ const Navbar = () => {
                         style={{ color: `${linkColor}` }}
                         className="hidden md:flex md:px-4 dark:invert"
                     >
-                        <div className="flex px-2">
+                        <li className="flex px-2">
                             {currentTheme === "dark" ? (
                                 <button
                                     className="rounded-md"
@@ -103,7 +103,7 @@ const Navbar = () => {
                                     <BsFillMoonStarsFill className="text-2xl" />
                                 </button>
                             )}
-                        </div>
+                        </li>
                         <li className="ml-10 text-sm uppercase hover:border-b">
                             <Link href="/">Home</Link>
                         </li>
@@ -128,7 +128,7 @@ const Navbar = () => {
                         <div className="px-2 dark:invert items-center">
                             {currentTheme === "dark" ? (
                                 <button
-                                    className="rounded-md"
+                                    className="rounded-md py-2"
                                     onClick={() => setTheme("light")}
                                 >
                                     {" "}
@@ -136,7 +136,7 @@ const Navbar = () => {
                                 </button>
                             ) : (
                                 <button
-                                    className="rounded-md"
+                                    className="rounded-md py-2"
                                     onClick={() => setTheme("dark")}
                                 >
                                     <BsFillMoonStarsFill className="text-2xl" />
