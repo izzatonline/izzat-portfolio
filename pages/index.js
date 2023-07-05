@@ -6,8 +6,20 @@ import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import Head from "next/head";
 import Image from "next/image";
+import { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
 
 export default function Home() {
+    const { systemTheme, theme, setTheme } = useTheme();
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    if (!mounted) return null;
+    const currentTheme = theme === "system" ? systemTheme : theme;
+
     return (
         <div>
             <Head>

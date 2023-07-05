@@ -3,9 +3,14 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from "react-icons/ai";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
-import { BsFillPersonLinesFill } from "react-icons/bs";
+import {
+    BsFillPersonLinesFill,
+    BsFillSunFill,
+    BsFillMoonStarsFill,
+} from "react-icons/bs";
 import { useRouter } from "next/router";
 import IzzatLogo from "../public/assets/izzat-logo2.png";
+import { useTheme } from "next-themes";
 
 const Navbar = () => {
     const [nav, setNav] = useState(false);
@@ -45,30 +50,60 @@ const Navbar = () => {
         window.addEventListener("scroll", handleShadow);
     }, []);
 
+    const { systemTheme, theme, setTheme } = useTheme();
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    if (!mounted) return null;
+    const currentTheme = theme === "system" ? systemTheme : theme;
+
     return (
         <div
-            style={{ backgroundColor: `${navBg}` }}
             className={
                 shadow
-                    ? "fixed w-full h-20 shadow-xl z-[100] ease-in-out duration-300"
-                    : "fixed w-full h-20 z-[100]"
+                    ? "fixed w-full h-20 shadow-xl z-[100] ease-in-out duration-300 dark:bg-gray-900"
+                    : "fixed w-full h-20 z-[100] dark:bg-gray-900"
             }
         >
-            <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
-                <Link href="/">
-                    <Image
-                        src={IzzatLogo}
-                        alt="/"
-                        width="150"
-                        height="50"
-                        className="cursor-pointer"
-                    />
-                </Link>
+            <div className="flex flex-row justify-between items-center w-full h-full px-2 2xl:px-16">
+                <div className="p-2">
+                    <Link href="/">
+                        <Image
+                            src={IzzatLogo}
+                            alt="/"
+                            width="150"
+                            height="50"
+                            className="cursor-pointer dark:invert"
+                        />
+                    </Link>
+                </div>
+
                 <div>
                     <ul
                         style={{ color: `${linkColor}` }}
-                        className="hidden md:flex"
+                        className="hidden md:flex md:px-4 dark:invert"
                     >
+                        <div className="flex px-2">
+                            {currentTheme === "dark" ? (
+                                <button
+                                    className="rounded-md"
+                                    onClick={() => setTheme("light")}
+                                >
+                                    {" "}
+                                    <BsFillSunFill className="text-2xl" />
+                                </button>
+                            ) : (
+                                <button
+                                    className="rounded-md"
+                                    onClick={() => setTheme("dark")}
+                                >
+                                    <BsFillMoonStarsFill className="text-2xl" />
+                                </button>
+                            )}
+                        </div>
                         <li className="ml-10 text-sm uppercase hover:border-b">
                             <Link href="/">Home</Link>
                         </li>
@@ -92,7 +127,7 @@ const Navbar = () => {
                     <div
                         style={{ color: `${linkColor}` }}
                         onClick={handleNav}
-                        className="px-10 md:hidden"
+                        className="px-10 md:hidden dark:invert hover:cursor-pointer"
                     >
                         <AiOutlineMenu size={25} />
                     </div>
@@ -189,6 +224,24 @@ const Navbar = () => {
                                     Contact
                                 </li>
                             </Link>
+                            <div className="flex py-4">
+                                {currentTheme === "dark" ? (
+                                    <button
+                                        className="rounded-md"
+                                        onClick={() => setTheme("light")}
+                                    >
+                                        {" "}
+                                        <BsFillSunFill className="text-2xl" />
+                                    </button>
+                                ) : (
+                                    <button
+                                        className="rounded-md"
+                                        onClick={() => setTheme("dark")}
+                                    >
+                                        <BsFillMoonStarsFill className="text-2xl" />
+                                    </button>
+                                )}
+                            </div>
                         </ul>
                         <div className="pt-40">
                             <p className="uppercase tracking-widest text-[#5651e5]">

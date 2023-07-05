@@ -14,9 +14,13 @@ const About = () => {
                     <p className="uppercase text-xl tracking-widest text-[#5651e5]">
                         About
                     </p>
-                    <h2 className="py-2 text-gray-600">Who I Am</h2>
-                    <p className="py-2 text-gray-600">Hello and Hi!</p>
-                    <p className="py-2 text-gray-600">
+                    <h2 className="py-2 text-gray-600 dark:text-white">
+                        Who I Am
+                    </h2>
+                    <p className="py-2 text-gray-600 dark:text-white">
+                        Hello and Hi!
+                    </p>
+                    <p className="py-2 text-gray-600 dark:text-white">
                         I am an experienced Project Engineer transitioning to a
                         career as a versatile professional in the fields of Full
                         Stack Development and Data Analysis. Passionate about
@@ -27,7 +31,7 @@ const About = () => {
                         strong analytical mindset, I am adept at translating
                         business requirements into practical solutions.
                     </p>
-                    <p className="py-2 text-gray-600">
+                    <p className="py-2 text-gray-600 dark:text-white">
                         Eager to apply my programming knowledge, data
                         manipulation skills, and problem-solving abilities to
                         contribute effectively as a Full Stack Developer or Data
@@ -36,7 +40,7 @@ const About = () => {
                         can make a meaningful impact.
                     </p>
                     <Link href="/#projects">
-                        <p className="py-2 text-gray-600 underline cursor-pointer">
+                        <p className="py-2 text-gray-600 underline cursor-pointer dark:text-gray-300">
                             Check out some of my latest projects.
                         </p>
                     </Link>

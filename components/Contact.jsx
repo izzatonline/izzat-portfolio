@@ -14,31 +14,35 @@ const Contact = () => {
                 <p className="text-xl tracking-widest uppercase text-[#5651e5]">
                     Contact
                 </p>
-                <h2 className="py-4">Get In Touch</h2>
-                <div className="grid lg:grid-cols-5 gap-8">
+                <h2 className="py-4 dark:text-white">Get In Touch</h2>
+                <div className="grid lg:grid-cols-5 gap-8 dark:bg-gray-900">
                     {/* left */}
-                    <div className="col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4">
+                    <div className="col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-10">
                         <div className="lg:p-4 h-full ">
                             <div>
                                 <Image
-                                    className="rounded-xl hover:scale-105 ease-in duration-300"
+                                    className="rounded-xl ease-in duration-300 "
                                     src={ContactImg}
                                     alt="/"
                                 />
                             </div>
                             <div>
-                                <h2 className="py-2">Izzat Jamal</h2>
-                                <p>Front-End Developer</p>
-                                <p className="py-4">
+                                <h2 className="py-6 dark:text-white">
+                                    Izzat Jamal
+                                </h2>
+                                <p className="dark:text-gray-200">
+                                    Front-End Developer
+                                </p>
+                                <p className="py-4 dark:text-gray-200">
                                     I am available for freelance or full-time
                                     positions. Contact me and let&apos;s talk.
                                 </p>
                             </div>
                             <div>
-                                <p className="uppercase pt-8">
+                                <p className="uppercase pt-8 dark:text-gray-200">
                                     Connect With Me
                                 </p>
-                                <div className="flex items-center justify-between py-4">
+                                <div className="flex items-center justify-between py-4 dark:text-white">
                                     <Link
                                         href="https://www.linkedin.com/in/izzatjamalullail/"
                                         target="_blank"
@@ -81,7 +85,7 @@ const Contact = () => {
                     </div>
 
                     {/* right */}
-                    <div className="col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4">
+                    <div className="col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4 dark:text-white">
                         <div className="p-4">
                             <form
                                 action="/"
@@ -140,7 +144,7 @@ const Contact = () => {
                                         name="message"
                                     ></textarea>
                                 </div>
-                                <button className="w-full p-4 text-gray-100 mt-4">
+                                <button className="w-full p-4 text-gray-100 mt-4 shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff]">
                                     Send Message
                                 </button>
                             </form>
@@ -149,7 +153,7 @@ const Contact = () => {
                 </div>
                 <div className="flex justify-center py-12">
                     <Link href="/">
-                        <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300">
+                        <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300 dark:bg-gray-900">
                             <HiOutlineChevronDoubleUp
                                 className="text-[#5651e5]"
                                 size={30}
