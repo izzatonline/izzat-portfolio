@@ -123,13 +123,33 @@ const Navbar = () => {
                             <Link href="/#contact">Contact</Link>
                         </li>
                     </ul>
-                    {/* Hamburger Icon */}
-                    <div
-                        style={{ color: `${linkColor}` }}
-                        onClick={handleNav}
-                        className="px-10 md:hidden dark:invert hover:cursor-pointer"
-                    >
-                        <AiOutlineMenu size={25} />
+                    {/* Hamburger Icon and Dark Mode Icon*/}
+                    <div className="flex items-center md:hidden">
+                        <div className="px-2 dark:invert items-center">
+                            {currentTheme === "dark" ? (
+                                <button
+                                    className="rounded-md"
+                                    onClick={() => setTheme("light")}
+                                >
+                                    {" "}
+                                    <BsFillSunFill className="text-2xl" />
+                                </button>
+                            ) : (
+                                <button
+                                    className="rounded-md"
+                                    onClick={() => setTheme("dark")}
+                                >
+                                    <BsFillMoonStarsFill className="text-2xl" />
+                                </button>
+                            )}
+                        </div>
+                        <div
+                            style={{ color: `${linkColor}` }}
+                            onClick={handleNav}
+                            className="px-10 dark:invert hover:cursor-pointer items-center"
+                        >
+                            <AiOutlineMenu size={25} />
+                        </div>
                     </div>
                 </div>
             </div>
