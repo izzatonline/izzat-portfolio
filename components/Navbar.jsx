@@ -84,9 +84,9 @@ const Navbar = () => {
                 <div>
                     <ul
                         style={{ color: `${linkColor}` }}
-                        className="hidden md:flex md:px-4 dark:invert"
+                        className="hidden md:flex md:px-4 py-2 items-center"
                     >
-                        <li className="flex px-2">
+                        <li className="flex px-2 dark:text-white">
                             {currentTheme === "dark" ? (
                                 <button
                                     className="rounded-md"
@@ -104,35 +104,35 @@ const Navbar = () => {
                                 </button>
                             )}
                         </li>
-                        <li className="ml-10 text-sm uppercase hover:border-b">
+                        <li className="ml-10 text-sm uppercase hover:border-b dark:text-white">
                             <Link href="/">Home</Link>
                         </li>
-                        <li className="ml-10 text-sm uppercase hover:border-b">
+                        <li className="ml-10 text-sm uppercase hover:border-b dark:text-white">
                             <Link href="/#about">About</Link>
                         </li>
-                        <li className="ml-10 text-sm uppercase hover:border-b">
+                        <li className="ml-10 text-sm uppercase hover:border-b dark:text-white">
                             <Link href="/#skills">Skills</Link>
                         </li>
-                        <li className="ml-10 text-sm uppercase hover:border-b">
+                        <li className="ml-10 text-sm uppercase hover:border-b dark:text-white">
                             <Link href="/#projects">Projects</Link>
                         </li>
-                        <li className="ml-10 text-sm uppercase hover:border-b">
+                        <li className="ml-10 text-sm uppercase hover:border-b dark:text-white">
                             <Link href="/resume">Resume</Link>
                         </li>
-                        <li className="ml-10 text-sm uppercase hover:border-b">
+                        <li className="ml-10 text-sm uppercase hover:border-b dark:text-white">
                             <Link href="/#contact">Contact</Link>
                         </li>
                     </ul>
                     {/* Hamburger Icon and Dark Mode Icon*/}
                     <div className="flex items-center md:hidden">
-                        <div className="px-2 dark:invert items-center">
+                        <div className="px-2 items-center">
                             {currentTheme === "dark" ? (
                                 <button
                                     className="rounded-md py-2"
                                     onClick={() => setTheme("light")}
                                 >
                                     {" "}
-                                    <BsFillSunFill className="text-2xl" />
+                                    <BsFillSunFill className="text-2xl dark:text-white" />
                                 </button>
                             ) : (
                                 <button
@@ -146,9 +146,12 @@ const Navbar = () => {
                         <div
                             style={{ color: `${linkColor}` }}
                             onClick={handleNav}
-                            className="px-10 dark:invert hover:cursor-pointer items-center"
+                            className="px-10 hover:cursor-pointer items-center"
                         >
-                            <AiOutlineMenu size={25} />
+                            <AiOutlineMenu
+                                size={25}
+                                className="dark:text-white"
+                            />
                         </div>
                     </div>
                 </div>

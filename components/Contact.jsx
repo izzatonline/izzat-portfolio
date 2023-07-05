@@ -15,9 +15,9 @@ const Contact = () => {
                     Contact
                 </p>
                 <h2 className="py-4 dark:text-white">Get In Touch</h2>
-                <div className="grid lg:grid-cols-5 gap-8 dark:bg-gray-900">
+                <div className="grid lg:grid-cols-5 gap-20">
                     {/* left */}
-                    <div className="col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-10">
+                    <div className="col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-10 dark:bg-gray-900">
                         <div className="lg:p-4 h-full ">
                             <div>
                                 <Image
@@ -85,7 +85,7 @@ const Contact = () => {
                     </div>
 
                     {/* right */}
-                    <div className="col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4 dark:text-white">
+                    <div className="col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4 dark:text-white dark:bg-gray-900">
                         <div className="p-4">
                             <form
                                 action="/"
@@ -144,7 +144,7 @@ const Contact = () => {
                                         name="message"
                                     ></textarea>
                                 </div>
-                                <button className="w-full p-4 text-gray-100 mt-4 shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff]">
+                                <button className="w-full p-4 text-gray-100 mt-4 shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff] dark:shadow-none">
                                     Send Message
                                 </button>
                             </form>
